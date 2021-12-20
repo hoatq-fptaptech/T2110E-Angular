@@ -1,0 +1,4 @@
+<button (click)="onCreateStudent()" type="button" [disabled]="!alowAddStudent">Add Student</button>
+<p>{{notification}}</p>
+<student *ngFor="let sv of sinhviens" [name] = "sv"></student>
+
