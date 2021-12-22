@@ -5,7 +5,9 @@ import {Component} from "@angular/core";
 })
 export class ClassroomComponent{
   alowAddStudent: boolean = false;
+  studentName: string = "";
   notification: string = "No student was created!";
+  created:boolean = false;
   sinhviens = [
     "Nguyễn Tiến Đạt",
     "Trần Thế Bôn",
@@ -18,6 +20,12 @@ export class ClassroomComponent{
   }
 
   onCreateStudent(){
-      this.notification = "Student was created!";
+      if(this.studentName.length >0){
+        this.sinhviens.push(this.studentName);
+        this.notification = "Student "+ this.studentName +" was created!";
+        this.studentName = "";
+        this.created = true;
+      }
+
   }
 }
