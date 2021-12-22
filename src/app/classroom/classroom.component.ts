@@ -8,6 +8,7 @@ export class ClassroomComponent{
   studentName: string = "";
   notification: string = "No student was created!";
   created:boolean = false;
+  gender: string = "";
   sinhviens = [
     "Nguyễn Tiến Đạt",
     "Trần Thế Bôn",
