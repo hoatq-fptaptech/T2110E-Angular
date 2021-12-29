@@ -2,21 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {DemoComponent} from "./demo/demo.component";
-import {ClassroomComponent} from "./classroom/classroom.component";
-import {StudentComponent} from "./student/student.component";
-import {ListproductComponent} from "./listproduct/listproduct.component";
-import {ProductComponent} from "./product/product.component";
-import {FormsModule} from "@angular/forms";
+import {HeaderComponent} from "./header/header.component";
+import {MainmenuComponent} from "./mainmenu/mainmenu.component";
+import {SidebarComponent} from "./sidebar/sidebar.component";
+import {RouterModule, Routes} from "@angular/router";
+import {HomeComponent} from "./home/home.component";
+import {CategoryComponent} from "./category/category.component";
 
+const appRoutes: Routes = [
+  {path:"",component:HomeComponent},
+  {path:"category",component:CategoryComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
-    DemoComponent,ClassroomComponent,StudentComponent,
-    ListproductComponent, ProductComponent
+    HeaderComponent,MainmenuComponent,SidebarComponent,
+    HomeComponent,CategoryComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
