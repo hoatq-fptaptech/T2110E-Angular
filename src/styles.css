@@ -110,3 +110,6 @@ p{
 .sidebar .black{
   background-color: gray;
 }
+input.ng-invalid{
+  border: 1px solid red;
+}
